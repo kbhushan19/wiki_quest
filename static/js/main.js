@@ -6,7 +6,7 @@ const sendLoader = document.getElementById('send-loader');
 const errorMessage = document.getElementById('error-message');
 
 // API endpoint URL
-const apiUrl = 'http://localhost:8008/path';
+const apiUrl = 'http://localhost:8008/extract';
 
 sendBtn.addEventListener('click', sendMessage);
 

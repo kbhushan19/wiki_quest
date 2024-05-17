@@ -5,7 +5,7 @@ from main import fetch_answer
 
 app = Flask(__name__)
 
-@app.route('/path', methods=['POST'])
+@app.route('/extract', methods=['POST'])
 def qa():
     """
     Handles the POST request for the Q&A endpoint.
