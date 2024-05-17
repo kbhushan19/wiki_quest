@@ -90,7 +90,7 @@ def fetch_answer(question):
                 relevant_sentences.append(sentence)
 
     if not relevant_sentences:
-        return "Sorry, I couldn't find a relevant answer in the text."
+        return "Apologies, couldn't find a relevant answer in the text. Please try to rephrase your query or delete the 'wiki_page.txt' file in 'resources' dir."
     else:
         resp_text = ''
         for sentence in relevant_sentences:

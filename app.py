@@ -35,7 +35,7 @@ def gui():
     return render_template('index.html')  # Render the index.html template
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8008, debug=True)
+    app.run(host="0.0.0.0", port=8008)
     """
     Runs the Flask web application.
 
