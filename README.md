@@ -38,7 +38,7 @@ Follow these steps to install and run the application:
 5. Install the required dependencies:
 
     ```sh
-    pip install -r req.txt
+    pip install -r requirements.txt
     ```
 
 ## Running the Application
