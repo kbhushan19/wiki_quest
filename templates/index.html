@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wiki Data QA</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #121212;
+        font-family: 'Inter', sans-serif;
+    }
+
+    #chat-container {
+      height: calc(100vh - 180px);
+      overflow-y: scroll;
+      background-color: #2b2b2b;
+      border-radius: 8px;
+      padding: 16px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    #user-input {
+      background-color: #2b2b2b;
+      color: #fff;
+      border: none;
+    }
+
+    #send-btn {
+      background-color: #4a4a4a;
+      color: #fff;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #send-btn:hover {
+      background-color: #6b6b6b;
+    }
+  </style>
+</head>
+<body class="flex justify-center items-center h-screen">
+  <div class="w-full max-w-4xl">
+    <div id="chat-container" class="mb-4 flex flex-col space-y-2">
+      <!-- Chat messages will be dynamically added here -->
+    </div>
+    <div class="flex">
+      <input type="text" id="user-input" class="flex-grow mr-2 py-2 px-4 rounded bg-gray-800 text-white" placeholder="Please ask your questions...">
+      <button id="send-btn" class="py-2 px-4 rounded bg-gray-700 text-white hover:bg-gray-600 transition duration-300">
+        <span id="send-btn-text">Send</span>
+        <div id="send-loader" class="hidden">
+          <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+          </svg>
+        </div>
+      </button>
+    </div>
+    <div id="error-message" class="mt-4 text-red-500 hidden"></div>
+  </div>
+  <script src="static/js/main.js"></script>
+</body>
+</html>
